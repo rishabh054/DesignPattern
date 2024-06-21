@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="alien" class="com.rishabh.Alien">
+    </bean>
+
+    <bean class="org.springframework.jdbc.core.JdbcTemplate" name="jdbc">
+        <property name="dataSource" ref="ds" />
+    </bean>
+
+    <bean class="datao" name="ds">
+        <property name="url"></property>
+        <property name="username"/>
+        <property name="password"/>
+        <property name="driver" />
+    </bean>
+
+</beans>
